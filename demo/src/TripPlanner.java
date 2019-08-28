@@ -35,4 +35,11 @@ public class TripPlanner {
         System.out.println("If you are going to spend "+days+" days you can spend up to "+(money/days)+" USD per day");
         System.out.println("Your total budget in MXC is "+(rate*money)+" which per day is "+(rate*money)/days+" MXC");
     }
+
+    public static void time() {
+        System.out.print("What is the time difference, in hours, between your home and your destination? ");
+        Scanner inputHrs = new Scanner(System.in);
+        int hours = inputHrs.nextInt();
+        System.out.println("That means that when it is midnight at home it will be "+hours+":00 at your travel destination. And when it is noon it will be"+(12+hours)+":00");
+    }
 }

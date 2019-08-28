@@ -12,8 +12,9 @@ public class LearnScanner {
         String address = input2.nextLine();
         System.out.println(address);*/
         double myDouble;
+        System.out.print("Type a double: ");
         Scanner doubleIn = new Scanner(System.in);
         myDouble = doubleIn.nextDouble();
-        System.out.println(myDouble);
+        System.out.println("Succes print "+myDouble);
     }
 }
