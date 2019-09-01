@@ -1,5 +1,4 @@
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Parameters {
     public static void main(String[] args){
@@ -9,7 +8,7 @@ public class Parameters {
         power(4, 3);
         power(9, 2);
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("Choose your base: ");
         double base = input.nextDouble();
         System.out.print("Choose your exp: ");
