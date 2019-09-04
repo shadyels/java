@@ -18,6 +18,7 @@ public class Loops {
             System.out.println();
         }
 
+        whileLoop();
         whileHello();
     }
 
