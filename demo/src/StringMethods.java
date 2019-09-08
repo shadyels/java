@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class StringMethods {
     public static void main(String[] args){
-        /* String origin = "abcde";
+        String origin = "abcde";
 
         for(int i = 0; i < origin.length(); i++){
             System.out.println("The character at index "+i+" is "+origin.charAt(i));
@@ -13,7 +13,7 @@ public class StringMethods {
         System.out.print("Choose a character: ");
         String s = input.next();
 
-        System.out.println("The character "+s+" is at index: "+origin.indexOf(s)); */
+        System.out.println("The character "+s+" is at index: "+origin.indexOf(s));
 
         findString();
     }
