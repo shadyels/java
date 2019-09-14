@@ -4,13 +4,19 @@ import java.lang.String;
 
 public class ProjectCrypto {
     public static void main(String[] args){
+        System.out.print("Write Down a message to decrypt: ");
         Scanner input = new Scanner(System.in).useLocale(Locale.US);
         String message = input.nextLine();
+        System.out.print("Parameter 1: ");
+        int shift = input.nextInt();
+        System.out.print("Parameter 2: ");
+        int group = input.nextInt();
         String encryptedMessage = groupify(
                 caesarify(
                         normalize(message)
-                , 2)
-        , 2)
+                , shift)
+        , group);
+        System.out.println("encrypting...");
         System.out.println(encryptedMessage);
     }
 
