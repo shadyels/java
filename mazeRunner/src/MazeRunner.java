@@ -54,7 +54,7 @@ public class MazeRunner {
             System.out.println("DANGER! You have made 90 moves, you only have 10 moves left to escape!!");
         } else if(moves == 100){
             System.out.println("Oh no! You took too long to escape, and now the maze exit is closed FOREVER >:[");
-            System.out.println("Sorry, but you didn't escape in time- you lose!");
+            System.out.println("Sorry, but you didn't escape in time - you lose!");
         }
     }
 
