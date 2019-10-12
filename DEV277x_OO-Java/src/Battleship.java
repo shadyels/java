@@ -5,8 +5,8 @@ public class Battleship {
     public static int columns = 10;
     public static String[][] ocean = new String[rows][columns];
     public static String[][] computerMoves = new String[rows][columns];
-    public static int playerShips = 2;
-    public static int computerShips = 2;
+    public static int playerShips = 5;
+    public static int computerShips = 5;
 
     public static void main(String[] args) {
         System.out.println("Welcome to BattleShips!");

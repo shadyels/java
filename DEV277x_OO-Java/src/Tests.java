@@ -10,4 +10,10 @@ public class Tests {
 
         System.out.println(point.returnDistance(point1));
     }
+
+    public static void fractionTests(){
+        Fraction twoArgs = new Fraction(1, 2);
+        Fraction oneArg = new Fraction(1);
+        Fraction noArgs = new Fraction();
+    }
 }
