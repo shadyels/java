@@ -98,7 +98,7 @@ public class Fraction {
         return inverted;
     }
 
-    public static int gcd(int num, int den) {
+    private static int gcd(int num, int den) {
         while (num != 0 && den != 0) {
             int remainder = num % den;
             num = den;
