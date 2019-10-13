@@ -30,22 +30,21 @@ public class FractionCalculatorAdvanced{
         String operation = split[1];
         String fraction2Str = split[2];
 
+        //test if the user input can be used by the Fraction Object
         while (
             !operation.equals("/") &&
             !operation.equals("+") &&
             !operation.equals("*") &&
             !operation.equals("-") &&
-            !operation.equals("Q")
+            !operation.equalsIgnoreCase("Q") &&
+            !isValidFraction(fraction1Str) &&
+            !isValidFraction(fraction2Str)
         ){
             System.out.print("Syntax Error! Please input your operation in the following form [FRACTION] [OPERATION] [FRACTION]: ");
-            userInput = input.nextLine(); //if doesn't work just restart the protocol
+            userInput = input.nextLine();
         }
 
-        while (!isValidFraction(fraction1Str) && !isValidFraction(fraction2Str)) {
-            System.out.print("Syntax Error! Please input your operation in the following form [FRACTION] [OPERATION] [FRACTION]: ");
-            userInput = input.nextLine(); //if doesn't work re start
-         }
-
+        //String to Fraction conversion
         Fraction fraction1 = getFraction(fraction1Str);
         Fraction fraction2 = getFraction(fraction2Str);
 
