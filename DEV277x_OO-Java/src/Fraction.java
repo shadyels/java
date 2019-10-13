@@ -37,42 +37,34 @@ public class Fraction {
         return numerator + "/" + denominator;
     }
 
-    public double toDouble() {
+    public int toDouble() {
         return numerator / denominator;
     }
 
     public Fraction add(Fraction other) {
-        Fraction add = new Fraction(
+        return new Fraction(
             (this.numerator * other.denominator) + (this.denominator * other.numerator),
             this.denominator * other.denominator);
-
-        return add;
     }
 
     public Fraction subtract(Fraction other) {
-        Fraction subtract = new Fraction(
+        return new Fraction(
             (this.numerator * other.denominator) - (this.denominator * other.numerator),
             this.denominator * other.denominator);
-
-        return subtract;
     }
 
     public Fraction multiply(Fraction other) {
-        Fraction multiply = new Fraction(
+        return new Fraction(
             this.numerator * other.numerator,
             this.denominator * other.denominator
         );
-
-        return multiply;
     }
 
     public Fraction divide(Fraction other) {
-        Fraction divide = new Fraction(
+        return new Fraction(
             this.numerator * other.denominator,
             this.denominator * other.numerator
         );
-
-        return divide;
     }
 
     public boolean equals(Object other) {
