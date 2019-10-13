@@ -15,11 +15,13 @@ public class Fraction {
     }
 
     public Fraction(int numerator) {
-        new Fraction(numerator, 1);
+        this.numerator = numerator;
+        this.denominator = 1;
     }
 
     public Fraction() {
-        new Fraction(0, 1);
+        this.numerator = 0;
+        this.denominator = 1;
     }
 
     //public methods
