@@ -3,9 +3,20 @@ import java.util.Scanner;
 public class FractionCalculatorAdvanced{
     public static void main(String[] Args) {
 
-        System.out.println("Welcome to Fraction Calculator");
+        System.out.println("Welcome to Advanced Fraction Calculator!\nYou can use any of the following operations add (+), subtract (-), multiply (*) and divide (/), input Q or q to exit the program.\nInput you fraction either in the from a/b, or just a to get a/1, or don't input any argument to get a fraction of 0/1\n");
+
+        int t = 0;
+        while(t < 3){
         Fraction a = advancedMethod();
         System.out.println(a);
+        System.out.println();
+        t++;
+        if(t < 3){
+            System.out.println("Let's do this again!");
+        } else {
+            System.out.println("That's it for today, goodbye!");
+        }
+        }
     }
 
     public static Fraction advancedMethod(){
@@ -81,7 +92,7 @@ public class FractionCalculatorAdvanced{
         if (input.contains("/")) {
             String[] inputSplit = input.split("/");
             test = inputSplit[0].matches("^-?\\d+$") && inputSplit[1].matches("^-?\\d+$"); // any int regex
-        } else if (input.matches("^-?\\d+$") || input.matches("^$")) {
+        } else if (input.matches("^-?\\d+$") || input.matches("^$") || input.equalsIgnoreCase("Q")) {
             test = true;
         } else {
             test = false;
