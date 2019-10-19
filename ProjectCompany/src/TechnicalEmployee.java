@@ -10,4 +10,8 @@ public class TechnicalEmployee extends Employee {
         return this.toString() + " has completed "+ succesfulCheckIns +"successful check-ins";
     }
 
+    public void addCheckin(){
+        this.succesfulCheckIns++;
+    }
+
 }

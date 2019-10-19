@@ -31,6 +31,7 @@ public class TechnicalLead extends TechnicalEmployee implements Manager {
     }
 
     public boolean approveCheckIn(SoftwareEngineer e) {
+        e.addCheckin();
         return e.getManager() == this && e.getCodeAccess();
     }
 

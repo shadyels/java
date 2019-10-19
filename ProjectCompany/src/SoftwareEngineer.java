@@ -22,11 +22,4 @@ public class SoftwareEngineer extends TechnicalEmployee {
     public int getSuccessfulCheckIns(){
         return this.succesfulCheckIns;
     }
-
-    public boolean checkInCode(){
-         if(((TechnicalLead) this.getManager()).approveCheckIn(this)){
-            this.succesfulCheckIns++;
-            return true;
-        } else return false;
-    }
 }
