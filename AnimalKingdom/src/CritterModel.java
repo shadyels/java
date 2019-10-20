@@ -9,7 +9,7 @@ public class CritterModel {
     // the following constant indicates how often infect should fail for
     // critters who didn't hop on their previous move (0.0 means no advantage,
     // 1.0 means 100% advantage)
-    public static final double HOP_ADVANTAGE = 0.2; // 20% advantage
+    public static final double HOP_ADVANTAGE = 0.0; // 0% advantage
 
     private int height;
     private int width;
