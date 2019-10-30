@@ -7,8 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/DEV277x_OO-Java/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mazeRunner/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ProjectCompany/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/binarysearch/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/DEV277x_OO-Java/out" />
       <excludeFolder url="file://$MODULE_DIR$/ProjectCompany/out" />
+      <excludeFolder url="file://$MODULE_DIR$/binarysearch/out" />
       <excludeFolder url="file://$MODULE_DIR$/mazeRunner/out" />
     </content>
     <orderEntry type="inheritedJdk" />
