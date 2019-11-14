@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
-public class FractionCalculatorAdvanced{
+public class FractionCalculatorAdvanced {
     public static void main(String[] Args) {
 
         System.out.println("Welcome to Advanced Fraction Calculator!\nYou can use any of the following operations add (+), subtract (-), multiply (*) and divide (/), input Q or q to exit the program.\nInput you fraction either in the from a/b, or just a to get a/1, or don't input any argument to get a fraction of 0/1\n");
 
         int t = 0;
-        while(t < 3){
-        Fraction a = advancedMethod();
-        System.out.println(a);
-        System.out.println();
-        t++;
-        if(t < 3){
-            System.out.println("Let's do this again!");
-        } else {
-            System.out.println("That's it for today, goodbye!");
-        }
+        while (t < 3) {
+            Fraction a = advancedMethod();
+            System.out.println(a);
+            System.out.println();
+            t++;
+            if (t < 3) {
+                System.out.println("Let's do this again!");
+            } else {
+                System.out.println("That's it for today, goodbye!");
+            }
         }
     }
 
-    public static Fraction advancedMethod(){
+    public static Fraction advancedMethod() {
         System.out.print("Input your operation in the following form [FRACTION] [OPERATION] [FRACTION]: ");
         Scanner input = new Scanner(System.in);
 
@@ -33,13 +33,13 @@ public class FractionCalculatorAdvanced{
         //test if the user input can be used by the Fraction Object
         while (
             !operation.equals("/") &&
-            !operation.equals("+") &&
-            !operation.equals("*") &&
-            !operation.equals("-") &&
-            !operation.equalsIgnoreCase("Q") &&
-            !isValidFraction(fraction1Str) &&
-            !isValidFraction(fraction2Str)
-        ){
+                !operation.equals("+") &&
+                !operation.equals("*") &&
+                !operation.equals("-") &&
+                !operation.equalsIgnoreCase("Q") &&
+                !isValidFraction(fraction1Str) &&
+                !isValidFraction(fraction2Str)
+        ) {
             System.out.print("Syntax Error! Please input your operation in the following form [FRACTION] [OPERATION] [FRACTION]: ");
             userInput = input.nextLine();
         }
@@ -48,14 +48,14 @@ public class FractionCalculatorAdvanced{
         Fraction fraction1 = getFraction(fraction1Str);
         Fraction fraction2 = getFraction(fraction2Str);
 
-        Fraction a = new Fraction(1,1);
-        if(operation.equals("+")){
+        Fraction a = new Fraction(1, 1);
+        if (operation.equals("+")) {
             a = fraction1.add(fraction2);
-        } else if(operation.equals("-")){
+        } else if (operation.equals("-")) {
             a = fraction1.subtract(fraction2);
-        } else if(operation.equals("*")){
+        } else if (operation.equals("*")) {
             a = fraction1.multiply(fraction2);
-        } else if(operation.equals("/")){
+        } else if (operation.equals("/")) {
             a = fraction1.divide(fraction2);
         } else {
             System.exit(0);
