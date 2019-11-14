@@ -33,12 +33,12 @@ public class FractionCalculatorAdvanced {
         //test if the user input can be used by the Fraction Object
         while (
             !operation.equals("/") &&
-                !operation.equals("+") &&
-                !operation.equals("*") &&
-                !operation.equals("-") &&
-                !operation.equalsIgnoreCase("Q") &&
-                !isValidFraction(fraction1Str) &&
-                !isValidFraction(fraction2Str)
+            !operation.equals("+") &&
+            !operation.equals("*") &&
+            !operation.equals("-") &&
+            !operation.equalsIgnoreCase("Q") &&
+            !isValidFraction(fraction1Str) &&
+            !isValidFraction(fraction2Str)
         ) {
             System.out.print("Syntax Error! Please input your operation in the following form [FRACTION] [OPERATION] [FRACTION]: ");
             userInput = input.nextLine();
