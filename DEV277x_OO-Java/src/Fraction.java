@@ -86,8 +86,7 @@ public class Fraction {
 
     // helper methods
     private static int reverse(int x) {
-        int inverted = -x;
-        return inverted;
+        return -x;
     }
 
     private static int gcd(int num, int den) {
