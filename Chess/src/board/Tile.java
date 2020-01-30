@@ -14,7 +14,7 @@ public abstract class Tile {
     private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
         final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
 
-        for(int i = 0; i < 64; i++){
+        for(int i = 0; i < BoardUtils.NUM_TILES; i++){
             emptyTileMap.put(i, new EmptyTile(i));
         }
 
@@ -22,7 +22,7 @@ public abstract class Tile {
     }
 
     // The constructor is private, as suche Tiles can only be created with the createTile() method
-    private Tile(int tileCoordinate) {
+    private Tile(final int tileCoordinate) {
         this.tileCoordinate = tileCoordinate;
     }
     public static Tile createTile(final int tileCoordinate, final Piece piece) {
@@ -54,7 +54,7 @@ public abstract class Tile {
     public static final class OccupiedTile extends Tile {
         final private Piece pieceOnTile;
 
-        private OccupiedTile(int coordinate, Piece piece) {
+        private OccupiedTile(int coordinate, final Piece piece) {
             super(coordinate);
             this.pieceOnTile = piece;
         }
