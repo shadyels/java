@@ -17,7 +17,6 @@ public class Move {
     }
 
     public static final class NormalMove extends Move {
-
         public NormalMove(
             final Board board,
             final Piece movedPiece,
@@ -40,7 +39,11 @@ public class Move {
             final int destinationCoordinate,
             final Piece attackedPiece
         ) {
-            super(board, movedPiece, destinationCoordinate);
+            super(
+                board,
+                movedPiece,
+                destinationCoordinate
+            );
             this.attackedPiece = attackedPiece;
         }
     }

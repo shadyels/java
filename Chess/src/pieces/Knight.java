@@ -31,13 +31,13 @@ public class Knight extends Piece {
                     isSecondColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                     isSeventhColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                     isEightColumnExclusion(this.piecePosition, currentCandidateOffset)) {
-                    continue;
+                    continue; //todo maybe should be a break
                 }
 
                 final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
 
                 if (!candidateDestinationTile.isTileOccupied()) {
-                    legalMoves.add(new NormalMove(board, this, candidateDestinationCoordinate)); // change this after defining Move
+                    legalMoves.add(new NormalMove(board, this, candidateDestinationCoordinate));
                 } else {
                     final Piece pieceAtLocation = candidateDestinationTile.getPiece();
                     final Alliance pieceAlliance = pieceAtLocation.getPieceAlliance();
