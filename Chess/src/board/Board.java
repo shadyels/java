@@ -3,16 +3,52 @@ package board;
 import pieces.*;
 import shared.Alliance;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Board {
     private final List<Tile> gameBoard;
+    private final Collection<Piece> whitePieces;
+    private final Collection<Piece> blackPieces;
 
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder);
+        this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE);
+        this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK);
+
+        //list of moves for each alliance, all pieces
+        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(this.whitePieces);
+        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(this.blackPieces);
+    }
+
+    @Override
+    public String toString(){
+        final StringBuilder builder = new StringBuilder();
+
+    }
+
+    private Collection<Move> calculateLegalMoves(final Collection<Piece> pieces) {
+        final List<Move> legalMoves = new ArrayList<>();
+
+        for(final Piece piece : pieces){
+            legalMoves.addAll(piece.calculateLegalMoves(this));
+        }
+
+        return Collections.unmodifiableList(legalMoves);
+    }
+
+    private static Collection<Piece> calculateActivePieces(final List<Tile> gameBoard, final Alliance alliance) {
+        final List<Piece> activePieces = new ArrayList<>();
+
+        for (final Tile tile : gameBoard) {
+            if (tile.isTileOccupied()) {
+                final Piece piece = tile.getPiece();
+                if (piece.getPieceAlliance() == alliance) {
+                    activePieces.add(piece);
+                }
+            }
+        }
+
+        return Collections.unmodifiableList(activePieces);
     }
 
     private static List<Tile> createGameBoard(final Builder builder) {
@@ -71,7 +107,7 @@ public class Board {
     }
 
     public Tile getTile(final int tileCoordinate) {
-        return null;
+        return gameBoard.get(tileCoordinate);
     }
 
     public static class Builder {
